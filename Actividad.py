@@ -20,6 +20,8 @@ for  producto in range(numeros_productos):
         else:
             break
     stock= int(input("Ingrese cantidad de stock de producto:"))
+    if stock < 0:
+        print("Stock no puede ser negativo....")
 
     productos[codigo]= {
         "Nombre":nombre,
@@ -28,3 +30,7 @@ for  producto in range(numeros_productos):
         "Precio_Unitario": precio_unitario,
         "Stock":stock,
     }
+
+for produ,product in productos.items():
+    print("---LISTA DE PRODUCTOS---"
+          )
