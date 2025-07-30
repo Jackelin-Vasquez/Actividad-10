@@ -48,3 +48,7 @@ if codigo_solicitato in productos:
     print(f"Talla:{product["talla"]}")
     print(f"Precio:{product["precio_unitario"]}")
     print(f"stock:{product["stock"]}")
+else:
+    print("Producto no encontrado....")
+
+
