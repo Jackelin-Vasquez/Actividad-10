@@ -4,18 +4,27 @@ numeros_productos= int(input("Ingrese cantidad de productos a ingresar:"))
 
 for  producto in range(numeros_productos):
     print(f"---Producto no.{producto +1}")
-    codigo= input("Ingrese codigo de producto:")
+    while True:
+        codigo= input("Ingrese codigo de producto:")
+        if codigo in productos:
+            print("Codigo repetido....No valido")
+        else:
+            break
     nombre= input("Ingrese nombre de producto:").lower()
     categoria= input("Ingrese categoria (Hombre, Mujer, Niño):").lower()
     talla= input("Ingrese talla (S,M,L,XL) :").lower()
-    Precio_unitario= float(input("Ingrese precio:"))
+    while True:
+        precio_unitario= float(input("Ingrese precio:"))
+        if precio_unitario <= 0:
+            print("Precio no valido...Debe ser mayor a 0")
+        else:
+            break
     stock= int(input("Ingrese cantidad de stock de producto:"))
 
     productos[codigo]= {
         "Nombre":nombre,
         "Categoria": categoria,
         "talla":talla,
-        "Precio_Unitario": Precio_unitario,
-        "Stock":stock
-
+        "Precio_Unitario": precio_unitario,
+        "Stock":stock,
     }
