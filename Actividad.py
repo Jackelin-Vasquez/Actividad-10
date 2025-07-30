@@ -6,8 +6,8 @@ mujer=0
 hombre=0
 niño=0
 
-for  producto in range(numeros_productos):
-    print(f"---Producto no.{producto +1}")
+for i in range(numeros_productos):
+    print(f"---Producto no.{i +1}")
     while True:
         codigo= input("Ingrese codigo de producto:")
         if codigo in productos:
@@ -18,10 +18,12 @@ for  producto in range(numeros_productos):
     categoria= input("Ingrese categoria (Hombre, Mujer, Niño):").lower()
     if categoria == "mujer":
         mujer +=1
-    if categoria == "Niño":
+    elif categoria == "niño":
         niño +=1
-    if categoria == "hombre":
+    elif categoria == "hombre":
         hombre += 1
+    else:
+        print("Categoria no valida...")
 
     talla= input("Ingrese talla (S,M,L,XL) :").lower()
     while True:
@@ -38,7 +40,7 @@ for  producto in range(numeros_productos):
         "nombre":nombre,
         "categoria": categoria,
         "talla":talla,
-        "precio_Unitario": precio_unitario,
+        "precio_unitario": precio_unitario,
         "stock":stock,
     }
 
@@ -47,12 +49,14 @@ for codigo,dato in productos.items():
         print(f"Nombre de producto:{dato["nombre"]}:")
         print(f"Categoria de producto:{dato["categoria"]}:")
         print(f"talla:{dato["talla"]}:")
-        print(f"Precio de producto:{dato["precio_Unitario"]}:")
+        print(f"Precio de producto:{dato["precio_unitario"]}:")
         print(f"Stock de producto:{dato["stock"]}:")
 
 codigo_solicitato= input("Ingrese codigo de producto a buscar:")
+
+print("---BUSQUEDA DE PRODUCTOS---")
 if codigo_solicitato in productos:
-    product=codigo_solicitato
+    product=productos[codigo_solicitato]
     print("---DETALLES DEL PRODUCTO---")
     print(f"Nombre producto:{product["nombre"]}")
     print(f"Categoria:{product["categoria"]}")
@@ -61,6 +65,10 @@ if codigo_solicitato in productos:
     print(f"stock:{product["stock"]}")
 else:
     print("Producto no encontrado....")
+
+for codigo, valor in productos.items():
+    precio= valor["precio_unitario"] * valor["stock"]
+    print(f"El precio unitario de {valor["nombre"]} es {precio}")
 
 print("---PRODUCTO POR CATEFORIA---")
 print(f"Hay {mujer} productos en categoria de -Mujer-")
