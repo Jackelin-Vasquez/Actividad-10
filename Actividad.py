@@ -69,9 +69,9 @@ else:
 print("---VALOR TOTAL DE PRODUCTOS")
 for codigo, valor in productos.items():
     precio= valor["precio_unitario"] * valor["stock"]
-    print(f"El valor total de inventario de : {valor["nombre"]} es {precio}")
+    print(f"El valor total de inventario de  -{valor["nombre"]}- es {precio}")
 
-print("---PRODUCTO POR CATEFORIA---")
+print("---PRODUCTO POR CATEGORIA---")
 print(f"Hay {mujer} productos en categoria de -Mujer-")
 print(f"Hay {hombre} productos en categoria de -Hombre-")
 print(f"Hay {niño} productos en categoria de -Niño-")
