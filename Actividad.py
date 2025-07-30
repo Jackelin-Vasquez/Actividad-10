@@ -45,16 +45,16 @@ for i in range(numeros_productos):
     }
 
 for codigo,dato in productos.items():
-        print(f"---LISTA DE PRODUCTOS---\n---Producto---")
-        print(f"Nombre de producto:{dato["nombre"]}:")
-        print(f"Categoria de producto:{dato["categoria"]}:")
+        print(f"---LISTA DE PRODUCTOS---\n{"---"*4}")
+        print(f"Nombre de producto:{dato["nombre"]}")
+        print(f"Categoria de producto:{dato["categoria"]}")
         print(f"talla:{dato["talla"]}:")
-        print(f"Precio de producto:{dato["precio_unitario"]}:")
-        print(f"Stock de producto:{dato["stock"]}:")
-
-codigo_solicitato= input("Ingrese codigo de producto a buscar:")
+        print(f"Precio de producto:{dato["precio_unitario"]}")
+        print(f"Stock de producto:{dato["stock"]}")
+        print("---"*4)
 
 print("---BUSQUEDA DE PRODUCTOS---")
+codigo_solicitato= input("Ingrese codigo de producto a buscar:")
 if codigo_solicitato in productos:
     product=productos[codigo_solicitato]
     print("---DETALLES DEL PRODUCTO---")
@@ -66,9 +66,10 @@ if codigo_solicitato in productos:
 else:
     print("Producto no encontrado....")
 
+print("---VALOR TOTAL DE PRODUCTOS")
 for codigo, valor in productos.items():
     precio= valor["precio_unitario"] * valor["stock"]
-    print(f"El precio unitario de {valor["nombre"]} es {precio}")
+    print(f"El valor total de inventario de : {valor["nombre"]} es {precio}")
 
 print("---PRODUCTO POR CATEFORIA---")
 print(f"Hay {mujer} productos en categoria de -Mujer-")
