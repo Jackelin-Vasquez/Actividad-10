@@ -24,13 +24,19 @@ for  producto in range(numeros_productos):
         print("Stock no puede ser negativo....")
 
     productos[codigo]= {
-        "Nombre":nombre,
-        "Categoria": categoria,
+        "nombre":nombre,
+        "categoria": categoria,
         "talla":talla,
-        "Precio_Unitario": precio_unitario,
-        "Stock":stock,
+        "precio_Unitario": precio_unitario,
+        "stock":stock,
     }
 
-for produ,product in productos.items():
-    print("---LISTA DE PRODUCTOS---"
-          )
+for codigo,dato in productos.items():
+        print(f"---LISTA DE PRODUCTOS---\n---Producto---")
+        print(f"Nombre de producto:{dato["nombre"]}:")
+        print(f"Nombre de producto:{dato["categoria"]}:")
+        print(f"Nombre de producto:{dato["talla"]}:")
+        print(f"Nombre de producto:{dato["precio_Unitario"]}:")
+        print(f"Nombre de producto:{dato["stock"]}:")
+
+
