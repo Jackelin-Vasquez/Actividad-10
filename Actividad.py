@@ -48,7 +48,7 @@ for codigo,dato in productos.items():
     print("---"*4)
     print(f"Nombre de producto:{dato["nombre"]}")
     print(f"Categoria de producto:{dato["categoria"]}")
-    print(f"talla:{dato["talla"]}:")
+    print(f"talla:{dato["talla"]}")
     print(f"Precio de producto:{dato["precio_unitario"]}")
     print(f"Stock de producto:{dato["stock"]}")
     print("---"*4)
@@ -66,7 +66,7 @@ if codigo_solicitato in productos:
 else:
     print("Producto no encontrado....")
 
-print("---VALOR TOTAL DE PRODUCTOS")
+print("---VALOR TOTAL DE PRODUCTOS---")
 for codigo, valor in productos.items():
     precio= valor["precio_unitario"] * valor["stock"]
     print(f"El valor total de inventario de  -{valor["nombre"]}- es {precio}")
