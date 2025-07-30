@@ -43,15 +43,15 @@ for i in range(numeros_productos):
         "precio_unitario": precio_unitario,
         "stock":stock,
     }
-
+print(f"---LISTA DE PRODUCTOS---")
 for codigo,dato in productos.items():
-        print(f"---LISTA DE PRODUCTOS---\n{"---"*4}")
-        print(f"Nombre de producto:{dato["nombre"]}")
-        print(f"Categoria de producto:{dato["categoria"]}")
-        print(f"talla:{dato["talla"]}:")
-        print(f"Precio de producto:{dato["precio_unitario"]}")
-        print(f"Stock de producto:{dato["stock"]}")
-        print("---"*4)
+    print("---"*4)
+    print(f"Nombre de producto:{dato["nombre"]}")
+    print(f"Categoria de producto:{dato["categoria"]}")
+    print(f"talla:{dato["talla"]}:")
+    print(f"Precio de producto:{dato["precio_unitario"]}")
+    print(f"Stock de producto:{dato["stock"]}")
+    print("---"*4)
 
 print("---BUSQUEDA DE PRODUCTOS---")
 codigo_solicitato= input("Ingrese codigo de producto a buscar:")
