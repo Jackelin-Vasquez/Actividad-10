@@ -2,6 +2,10 @@ productos= {}
 
 numeros_productos= int(input("Ingrese cantidad de productos a ingresar:"))
 
+mujer=0
+hombre=0
+niño=0
+
 for  producto in range(numeros_productos):
     print(f"---Producto no.{producto +1}")
     while True:
@@ -12,6 +16,13 @@ for  producto in range(numeros_productos):
             break
     nombre= input("Ingrese nombre de producto:").lower()
     categoria= input("Ingrese categoria (Hombre, Mujer, Niño):").lower()
+    if categoria == "mujer":
+        mujer +=1
+    if categoria == "Niño":
+        niño +=1
+    if categoria == "hombre":
+        hombre += 1
+
     talla= input("Ingrese talla (S,M,L,XL) :").lower()
     while True:
         precio_unitario= float(input("Ingrese precio:"))
@@ -51,4 +62,8 @@ if codigo_solicitato in productos:
 else:
     print("Producto no encontrado....")
 
+print("---PRODUCTO POR CATEFORIA---")
+print(f"Hay {mujer} productos en categoria de -Mujer-")
+print(f"Hay {hombre} productos en categoria de -Hombre-")
+print(f"Hay {niño} productos en categoria de -Niño-")
 
