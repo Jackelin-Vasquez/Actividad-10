@@ -2,7 +2,7 @@ productos= {}
 numeros_productos= int(input("Ingrese cantidad de productos a ingresar:"))
 mujer=0
 hombre=0
-niño=0
+nino=0
 
 for i in range(numeros_productos):
     print(f"---Producto no.{i +1}")
@@ -17,7 +17,7 @@ for i in range(numeros_productos):
     if categoria == "mujer":
         mujer +=1
     elif categoria == "niño":
-        niño +=1
+        nino +=1
     elif categoria == "hombre":
         hombre += 1
     else:
@@ -72,5 +72,5 @@ for codigo, valor in productos.items():
 print("---PRODUCTO POR CATEGORIA---")
 print(f"Hay {mujer} productos en la categoria de -Mujer-")
 print(f"Hay {hombre} productos en la categoria de -Hombre-")
-print(f"Hay {niño} productos en la categoria de -Niño-")
+print(f"Hay {nino} productos en la categoria de -Niño-")
 
