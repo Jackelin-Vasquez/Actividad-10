@@ -1,7 +1,5 @@
 productos= {}
-
 numeros_productos= int(input("Ingrese cantidad de productos a ingresar:"))
-
 mujer=0
 hombre=0
 niño=0
@@ -69,10 +67,10 @@ else:
 print("---VALOR TOTAL DE PRODUCTOS---")
 for codigo, valor in productos.items():
     precio= valor["precio_unitario"] * valor["stock"]
-    print(f"El valor total de inventario de  -{valor["nombre"]}- es {precio}")
+    print(f"El valor total de inventario de -{valor["nombre"]}- es {precio}")
 
 print("---PRODUCTO POR CATEGORIA---")
-print(f"Hay {mujer} productos en categoria de -Mujer-")
-print(f"Hay {hombre} productos en categoria de -Hombre-")
-print(f"Hay {niño} productos en categoria de -Niño-")
+print(f"Hay {mujer} productos en la categoria de -Mujer-")
+print(f"Hay {hombre} productos en la categoria de -Hombre-")
+print(f"Hay {niño} productos en la categoria de -Niño-")
 
