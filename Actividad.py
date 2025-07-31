@@ -73,4 +73,5 @@ print("---PRODUCTO POR CATEGORIA---")
 print(f"Hay {mujer} productos en la categoria de -Mujer-")
 print(f"Hay {hombre} productos en la categoria de -Hombre-")
 print(f"Hay {nino} productos en la categoria de -Niño-")
+print("---")
 
