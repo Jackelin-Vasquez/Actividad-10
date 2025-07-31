@@ -58,6 +58,7 @@ if buscar_propietario in propietarios:
     print(f"Modelo:{propi["vehiculos"]["modelo"]}")
     print(f"Año:{propi["vehiculos"]["año"]}")
     print(f"Impuesto:{propi["vehiculos"]["impuesto"]}")
+    print(f"------")
 
 print("---CANTIDAD DE CARROS CON IMPUESTO---")
 print(f"Cantidad de carros que tienen impuesto:{si}\nCantidad de carros que no tienen impuestos:{no}.")
