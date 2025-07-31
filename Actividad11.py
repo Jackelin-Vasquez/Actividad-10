@@ -34,7 +34,7 @@ for i in range(numero_propietarios):
             }
     }
 
-for propietarios,propietario in propietarios.items():
+for propietar,propietario in propietarios.items():
     print("---DATOS DE PROPIETARIOS---")
     print("---"*4)
     print(f"Nombre:{propietario["nombre"]}")
@@ -51,7 +51,7 @@ buscar_propietario= input("Ingrese número de identificación para buscar propie
 if buscar_propietario in propietarios:
     propi= propietarios[buscar_propietario]
     print("---Propietario---")
-    print(f"Nombre:{propi["Nombre"]}")
+    print(f"Nombre:{propi["nombre"]}")
     print(f"Telefono:{propi["telefono"]}")
     print("---VEHICULOS---")
     print(f"Marca:{propi["vehiculos"]["placa"]}")
@@ -59,6 +59,7 @@ if buscar_propietario in propietarios:
     print(f"Año:{propi["vehiculos"]["año"]}")
     print(f"Impuesto:{propi["vehiculos"]["impuesto"]}")
     print(f"------")
-
+else:
+    print("Propietario no encontrado...")
 print("---CANTIDAD DE CARROS CON IMPUESTO---")
 print(f"Cantidad de carros que tienen impuesto:{si}\nCantidad de carros que no tienen impuestos:{no}.")
