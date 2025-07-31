@@ -41,7 +41,7 @@ for i in range(numeros_productos):
         "precio_unitario": precio_unitario,
         "stock":stock,
     }
-print(f"---LISTA DE PRODUCTOS---")
+print("---LISTA DE PRODUCTOS---")
 for codigo,dato in productos.items():
     print("---"*4)
     print(f"Nombre de producto:{dato["nombre"]}")
